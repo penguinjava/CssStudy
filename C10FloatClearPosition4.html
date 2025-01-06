@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+  .container {
+      position: relative;
+  }
+  /*<img> 태그 선택자로 이미지 선택*/
+  img {
+    /* 이미지의 가로 크기를 웹브라우저와 동일하게 설정*/
+      width: 100%;
+      height: auto;
+      /* 투명도 : 0으로 갈수록 흐려지고, 1로 갈수록 선명해짐*/
+      opacity: 0.3;
+  }
+  .topleft{
+    position:absolute;
+    top:10px;
+    left:10px;
+  }
+  .topright{
+    position: absolute;
+    top:10px;
+    right: 10px;
+  }
+  .centered{
+    position: absolute;
+    top:50%;
+    left:50%;
+  }
+  .bottomleft{
+    position: absolute;
+    bottom: 10px;
+    left:10px;
+  }
+  .bottomright{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+  }
+  </style>
+  <div class="container">
+      <img src="./images/img_5terre_wide.jpg" width="1000" height="300">
+      <div class="topleft">Top Left</div>
+      <div class="topright">Top Right</div>
+      <div class="centered">centered</div>
+      <div class="bottomleft">bottom Left</div>
+      <div class="bottomright">bottom Right</div>
+  </div> 
+</body>
+</html>

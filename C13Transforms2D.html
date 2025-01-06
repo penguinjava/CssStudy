@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+    div 상자의 공통속성 정의
+    */
+    div{
+      width:100px; height:100px; text-align:center;
+      background-color:yellow;line-height:100px;
+      border:3px solid gray;
+    }
+    .c1{background-color: red;}
+    .c2{background-color: green;}
+    .c3{background-color: blue;}
+  </style>
+</head>
+<body>
+  <h2>2D transform</h2>
+  <div>
+    기본상자
+  </div>
+  <h3>translate() - 이동</h3>
+  <style>
+    /* translate(x축, y축) : 수평 혹은 수직방향
+    으로 엘리먼트를 이동시킨다. 유사한 속성으로
+    translateX, translateY를 사용할 수 있다.*/
+    .box01{
+      transform:translate(100px,10px);
+    }
+  </style>
+  <div class="box01 c1">
+    box01
+  </div>
+
+  <h3>rotate() - 회전</h3>
+  <style>
+    /*
+    rotate(각도) : 시계방향으로 주어진 각도만큼 회전한다.
+    만약 음수로 설정하면 반시계 방향으로 회전한다.
+    각도는 deg(degree)와 함께 기술해야한다.
+    */
+    .box02{
+      transform:translate(500px,0px)
+        rotate(20deg);
+    }
+  </style>
+  <div class="box02 c2">
+    box02
+  </div>
+  <h3>scale() - 확대/축소</h3>
+  <style>
+    /* scale(x축,y축): 확대 혹은 축소를 한다. 1를
+    기준으로 크면 확대, 작으면 축소한다.
+    각 축을 기준으로 scaleX, scaleY를 사용할수 있다.*/
+    .box03{
+      transform:
+        translate(200px,0px)
+        scale(2,1.3);
+      }
+  </style>
+  <div class="box03 c3">
+    box03
+  </div>
+
+  <h3>skew() - 기울임</h3>
+  <style>
+    /*
+    skew(x축, y축) : 엘리먼트를 비스듬하게 변형한다.
+    양수면 좌상단과 우하단을 당기듯 변형된다.
+    즉 역슬러쉬 방향
+    음수면 반대로 슬러쉬 방향으로 변형된다.
+    */
+    .box04{
+      transform:
+        translate(100px,0px)
+        skew(20deg, -10deg);
+      }
+  </style>
+  <div class="box04 c1">
+    box04
+  </div>
+
+  <h3>matric() - 통합적용</h3>
+  <style>
+    /*
+    matrix() 함수는 스케일, 기울임, 이동을 통합적으로
+    적용한다. 단, skew에 deg를 사용하지
+    않고 정수값을 사용해야 한다.
+    형식]
+      matrix(scaleX,skewY, skewX,scaleY,translateX,translateY)
+    */
+    .box05{
+      transform:matrix(1,-0.5,0,1,300,-50);
+      }
+  </style>
+  <div class="box05 c2">
+    box05
+  </div>
+</body>
+</html>

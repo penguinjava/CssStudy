@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C10FloatClearPosition3</title>
+</head>
+<body>
+  <style>
+    /*
+    한국에서 주로 사용하는 크롬, 엣지와 외국에서 사용하는
+    오페라, 사파리 등의  웹 브라우저는 사용하는 엔진이
+    달라 같은 css속성이라도 다르게 표현될 수 있다.
+    크로스 브라우징을 위해 몇가지의 접두어가 존재한다.
+    -webkit- : 구글 크롬, 사파리 브라우저에 적용
+    -moz- : 파이어폭스에 적용
+    -ms- : 익스플로러. 현재는 거의 사용되지 않음
+    -o- : 오페라에 적용
+    */
+    /* 스티커 처럼 상단에 box를 붙일때 사용한다.*/
+    div.sticky{
+      position: -webkit-sticky; /*Safari*/
+      position: sticky;
+      top: 0; padding:10px; text-align:center;
+      background-color:#cae8ca;
+      border:2px solid #4CAF50;
+    }
+  </style>
+  <p>스티키 상단 영역</p>
+  <div class="sticky">sticky 박스</div>
+  <div>
+    <p>
+      로렘 입숨은 디자이너와 개발자가 사용하는 가상 텍스트입니다.
+이 텍스트는 실제 내용을 대체하기 위해 만들어졌습니다.
+글의 레이아웃이나 디자인을 테스트할 때 사용됩니다.
+로렘 입숨은 고대 라틴어에서 기원하였으며, 본래 의미는 없습니다.
+이를 통해 사용자 인터페이스의 가독성을 평가할 수 있습니다.
+    </p>
+    <p style="margin-top:1000px;">
+      로렘 입숨은 디자이너와 개발자가 사용하는 가상 텍스트입니다.
+이 텍스트는 실제 내용을 대체하기 위해 만들어졌습니다.
+글의 레이아웃이나 디자인을 테스트할 때 사용됩니다.
+로렘 입숨은 고대 라틴어에서 기원하였으며, 본래 의미는 없습니다.
+이를 통해 사용자 인터페이스의 가독성을 평가할 수 있습니다.
+    </p>
+  </div>
+  <style>
+    /*
+    fixed 속성값은 웹브라우저의 특정 위치에 레이어를 고정하고
+    싶을때 사용한다. 해당 속성이 적용되면 
+    */
+    div.fixed{
+      position:fixed;
+      bottom:0; right:0;
+      width:100px; text-align:center;
+      height:100px; line-height:100px;
+      bottom:10px;right:10px;
+      background-color:#cae8ca;
+      border:2px solid #4CAF50;
+    }
+  </style>
+    <a href="#">
+  <div class="fixed">
+    fixed 박스▲
+  </div></a>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

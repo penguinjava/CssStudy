@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style type="text/css">
+    #navlist{
+      position: relative;
+    }
+    /* li태그의 마진, 패딩 설정 및 블릿 제거*/
+    #navlist li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      top: 0;
+    }
+    /*
+    <a> 태그는 인라인 엘리먼트 이므로 컨텐츠가 없으면 영역
+      을 표시할 수 없다. 따라서 높이와 block 속성을 부여한다.
+    */
+    #navlist li, #navlist a{
+      height: 44px;
+      display: block;
+    }
+    /*
+    background의 image 속성과 position 속성을 통해 표현되는
+    이미지의 위치를 조절하여 특정 부분만 출력한다.
+    */
+    #home{
+      left: 0px;
+      width: 46px;
+      /*
+      이미지가 표현된 가로, 세로 크기를 설정한 다음 배경으로 이미지를
+      삽입한다. 이때 배경이 시작되는 위치를 잡아서 버튼처럼 보이게 하는
+      것이다.
+        형식] url(배경이미지경로) left속성값 top속성값
+      */
+      background: url('images/img_navsprites_hover.gif') 0 0;
+    }
+    /*마우스 오버시 이미지를 위로 끌어올리기 위해 음수값을
+    설정한다. */
+    #home a:hover{
+      background: url('images/img_navsprites_hover.gif') 0 -45px;
+    }
+    #prev{
+      left: 63px;
+      width: 43px;
+      background: url('images/img_navsprites_hover.gif') -47px 0;
+    }
+    #prev a:hover{
+      background: url('images/img_navsprites_hover.gif') -47px -45px;
+    }
+    #next{
+      left: 129px;
+      width: 43px;
+      background: url('imges/img_navsprites_hover.gif') -91px 0px;
+    }
+    #next a:hover{
+      background: url('imges/img_navsprites_hover.gif') -91px -45px;
+    }
+  </style>
+  <ul id="navlist">
+    <li id="home"><a href="#"></a></li>
+    <li id="prev"><a href="#"></a></li>
+    <li id="next"><a href="#"></a></li>
+  </ul>
+</body>
+</html>
